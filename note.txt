@@ -1,0 +1,24 @@
+########## Health Blog ###########
+Date -> 15 October 2021
+
+Cleint Degsin is From internet.
+Admin/Staff Dashboard is From material bootstrap4 free version.
+Develope By Thaw Zin Soe
+LinkendInAccount ====> https://www.linkedin.com/in/thaw-zin-soe-0b92b61a5/
+Email ===> thawzinsoe.dev@gmail.com / thawzinsoe.business.mm@gmail.com
+
+Backend Technology 
++ Laravel
++ MySQL
+
+Install this project
+1. Create database with name "laravel7_blog"
+2. Import SQL File 
+3. php artisan serve
+
+
+
+Feature 
+1. Membership System
+2. Category , Post (Create Update Delete Show)
+3. Post API
