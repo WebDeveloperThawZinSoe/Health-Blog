@@ -14,22 +14,26 @@
         </div>
 </div>
 
+
       <div class="container">
         <!-- Example row of columns -->
         <div class="row">
-            @foreach($posts as $post)
-            <div class="col-md-4">
+         
+            <div class="col-md-12">
                 <h3> {{$post->name}} </h3>
                 <h6> {{$post->categroy_id}} | {{ $post->created_at->diffForHumans() }} </h6>
+                <br>
+                <img class="img-responsive" style="width: 100%;" src="{{ asset('uploads')}}/{{$post->image}}" alt=""> 
+                <br>
+                <p> {{$post->description }} </p>
 
-                <p> {{ mb_substr($post->description,0,100) }} ... read rome </p>
-                <p><a class="btn btn-secondary" href="/posts/{{ $post->id }}/detail" role="button">View details &raquo;</a></p>
+                <p><a class="btn btn-secondary" href="/" role="button"> Back</a></p>
             </div>
 
-            @endforeach
+          
         
         </div>
-        <div class="d-flex justify-content-center"> {{ $posts->links() }}</div>
+       
         <hr>
 
       </div> <!-- /container -->

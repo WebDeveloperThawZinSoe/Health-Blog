@@ -22,6 +22,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 /******Cleint******/
 
 Route::get('/','PageController@index');
+Route::get('/posts/{id}/detail','PageController@detail');
 
 /***** Admin ******/
 Route::middleware('auth')->group(function () {
