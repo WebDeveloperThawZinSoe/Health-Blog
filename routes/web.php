@@ -40,4 +40,7 @@ Route::middleware('auth')->group(function () {
     Route::get("/admin/post","PostController@show");
     Route::post("/admin/post/create","PostController@create");
     Route::get("/admin/post/{id}/delete","PostController@delete");
+    Route::get("/admin/post/{id}/detail","PostController@detail");
+    Route::get("/admin/post/{id}/update","PostController@update");
+    Route::post("/admin/post/{id}/update","PostController@upgrate");
 });

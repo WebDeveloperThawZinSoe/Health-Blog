@@ -35,8 +35,8 @@
 
         Tip 2: you can also add an image using data-image tag
     -->
-      <div class="logo"><a href="http://www.creative-tim.com" class="simple-text logo-normal">
-          Creative Tim
+      <div class="logo"><a href="/" class="simple-text logo-normal">
+          Healthy Blog
         </a></div>
       <div class="sidebar-wrapper">
         <ul class="nav">
@@ -59,7 +59,7 @@
               
             </a>
           </li>
-          <li class="nav-item {{ (request()->is('admin/post')) ? 'active' : '' }} ">
+          <li class="nav-item {{ (request()->is('admin/post')) ? 'active' : '' }} {{ (request()->is('admin/post/*/update')) ? 'active' : '' }} {{ (request()->is('admin/post/*/detail')) ? 'active' : '' }} ">
             <a class="nav-link" href="/admin/post">
               <i class="material-icons">book</i>
               <p>Post</p>
@@ -152,10 +152,17 @@
                   </p>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                  <a class="dropdown-item" href="#">Profile</a>
-                  <a class="dropdown-item" href="#">Settings</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Log out</a>
+
+                
+                  <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
                 </div>
               </li>
             </ul>

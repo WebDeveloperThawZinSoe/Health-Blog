@@ -24,7 +24,7 @@
                       <div class="col-md-12">
                         <div class="form-group bmd-form-group">
                           <label class="bmd-label-floating">Category</label>
-                          <select name="category"  class="form-control">
+                          <select required name="category"  class="form-control">
                               @foreach($categories as $category)
                               <option value="{{ $category->name }}">{{ $category->name }}</option>
                               @endforeach
