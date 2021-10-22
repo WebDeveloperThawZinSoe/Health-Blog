@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Stichoza\GoogleTranslate\GoogleTranslate;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +24,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/','PageController@index');
 Route::get('/posts/{id}/detail','PageController@detail');
+
 
 /***** Admin ******/
 Route::middleware('auth')->group(function () {

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+
 use app\User;
 
 use App\Category;
@@ -33,6 +34,7 @@ class PageController extends Controller
             "post" => $post
         ]);
     }
+
 
 
 }

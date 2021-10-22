@@ -6,6 +6,8 @@
 
 
 
+
+
 <div class="jumbotron">
         <div class="container" >
           <h1 class="display-3" >Hello, world!</h1>
@@ -19,7 +21,8 @@
         <div class="row">
             @foreach($posts as $post)
             <div class="col-md-4">
-                <h3> {{$post->name}} </h3>
+              
+                <h3> <?php echo $post->name ?> </h3>
                 <h6> {{$post->categroy_id}} | {{ $post->created_at->diffForHumans() }} </h6>
 
                 <p> {{ mb_substr($post->description,0,100) }} ... read rome </p>
